@@ -27,11 +27,11 @@
       <!-- surname -->
       <q-input
         filled
-        v-model="name"
+        v-model="surname"
         label="Your surname *"
-        hint="Surname"
+        hint="Name and surname"
         lazy-rules
-        :rules="[ val => val && val.length > 0 || 'Please type Your surname']"
+        :rules="[ val => val && val.length > 0 || 'Please type surname someting']"
       />
 
 
@@ -47,7 +47,7 @@
         ]"
       />
 
-      <q-toggle v-model="surname" label="I accept the license and terms" />
+      <q-toggle v-model="accept" label="I accept the license and terms" />
 
       <div>
         <q-btn label="Submit" type="submit" color="primary"/>
@@ -97,6 +97,8 @@ export default {
       },
 
       onReset () {
+        id.value = null
+        surname.value = null
         name.value = null
         age.value = null
         accept.value = false
