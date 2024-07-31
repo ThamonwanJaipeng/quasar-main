@@ -38,7 +38,7 @@
         ]"
       />
 
-      <q-toggle v-model="accept" label="I accept the license and terms" />
+      <q-toggle v-model="surname" label="I accept the license and terms" />
 
       <div>
         <q-btn label="Submit" type="submit" color="primary"/>
@@ -57,13 +57,13 @@ export default {
   setup () {
     const $q = useQuasar()
 
-    const name = ref(null)
-    const age = ref(null)
+    const name = ref(ธมลวรรณ)
+    const surname = ref(ใจเป็ง)
     const accept = ref(false)
 
     return {
       name,
-      age,
+      surname,
       accept,
 
       onSubmit () {
